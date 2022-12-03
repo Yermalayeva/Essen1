@@ -8,7 +8,7 @@ int num2 = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите третье число: ");
 int num3 = int.Parse(Console.ReadLine());
 
-if(num1 > num1)
+if(num1 > num3)
 {
     if(num1 > num2)
     {
