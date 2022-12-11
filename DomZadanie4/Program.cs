@@ -1,35 +1,42 @@
 ﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 // Например: 3, 5 -> 243 (3⁵); 2, 4 -> 16.
 
-/*Console.WriteLine("Введите число a: ");
+Console.WriteLine("Введите число a: ");
 int a = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите число b: ");
 int b = int.Parse(Console.ReadLine());
 
-double result = 1;
+double result = GetOneNumberStepToNumber(a, b);
+Console.WriteLine(result);
 
-if(b == 0)
+double GetOneNumberStepToNumber(int a, int b)
 {
-    result = 1;
-}
-
-if(b > 0)
-{
-    for(int i = 0; i < b; i++)
+    double result = 1;
+    if (b == 0)
     {
-        result = result * a;
+        result = 1;
     }
-}
 
-if(b < 0)
-{
-    for(int i = 0; i > b; i--)
+    if (b > 0)
     {
-        result = 1.0 / a * result;
+        for (int i = 0; i < b; i++)
+        {
+            result = result * a;
+        }
     }
+
+    if (b < 0)
+    {
+        for (int i = 0; i > b; i--)
+        {
+            result = 1.0 / a * result;
+        }
+    }
+
+    return result;
 }
 
-Console.WriteLine(result);*/
+
 
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
@@ -57,7 +64,7 @@ int GetSumNumber(int number)
 // Например: 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]; 6, 1, 33 -> [6, 1, 33].
 
 
-Console.Write("Введите количество элементов массива: ");
+/*Console.Write("Введите количество элементов массива: ");
 int elementCount = int.Parse(Console.ReadLine());
 int [] result = CreatArray();
 
@@ -72,7 +79,6 @@ int []CreatArray()
     return array;
 }
 
-
 PrintArray(result);
 
 void PrintArray(int [] array)
@@ -84,4 +90,4 @@ void PrintArray(int [] array)
     }
     Console.Write(array[array.Length-1]);
     Console.Write("]");
-}
+}*/
