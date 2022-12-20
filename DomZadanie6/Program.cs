@@ -1,7 +1,7 @@
 ﻿// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 // Например: 0, 7, 8, -2, -2 -> 2; 1, -7, 567, 89, 223-> 4.
 
-Console.Write("Введите количество элементов массива: ");
+/*Console.Write("Введите количество элементов массива: ");
 int elementCount = int.Parse(Console.ReadLine());
 int [] numbers = CreatArray(elementCount);
 
@@ -46,7 +46,7 @@ int GetSumNumberMoreZero(int[] numbers)
     return sum;
 }
 Console.WriteLine();
-Console.WriteLine($"количество значений больше 0 = {GetSumNumberMoreZero(numbers) }");
+Console.WriteLine($"количество значений больше 0 = {GetSumNumberMoreZero(numbers) }");*/
 
 
 
@@ -77,5 +77,56 @@ double [] GetTochkaPeresechenia(double b1, double k1, double b2, double k2)
     return array;
 }*/
 
+Console.WriteLine("Введите значения первой прямой(b1, k1): ");
+double b1 = Convert.ToInt32(Console.ReadLine());
+double k1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите значения второй прямой(b2, k2): ");
+double b2 = Convert.ToInt32(Console.ReadLine());
+double k2 = Convert.ToInt32(Console.ReadLine());
+
+
+double[] array = GetTochkaPeresechenia(b1, k1, b2, k2);
+
+if(array.Length == 0)
+{
+    Console.WriteLine("Прямые паралелльны");
+}
+
+else
+{
+    Console.WriteLine($"Точка пересечения двух прямыx: ( {array[0]}, {array[1]} )");
+    //Console.WriteLine($"Точка пересечения двух прямыx:  ({string.Join("; ",array)})");
+}
+
+double [] GetTochkaPeresechenia(double b1, double k1, double b2, double k2)
+{
+    double[] array;
+    if(k1 == k2)
+    {
+        array = new double[0];
+    }
+    
+
+    else
+    {
+        double x = (b2 - b1) / (k1 - k2);
+        double y = k2 * x + b2;
+        array = new double[2] { x, y };
+    }
+    
+    return array;
+    
+}
+
+
+
+/*if(k1 = k2)
+{
+
+    double x == 0;
+    
+}
+Console.WriteLine("Прямые паралелльны");
+//Console.WriteLine($"Точка пересечения двух прямыx:( {x},  {y})");*/
 
 
